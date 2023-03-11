@@ -3,6 +3,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="description" content="Library management system">
+		<script type='text/javascript' src='node_modules/jshashes/hashes.js'></script>
+		<script type="text/javascript">
+			function login(){
+				hash=new Hashes.SHA256().hex(document.getElementById(userName).value+document.getElementById(password).value);
+				
+			}
+		</script>
 		<title>Library System</title>
 		<style>
 			h1 {
@@ -43,6 +50,6 @@
 				</td>
 			</tr>
 		</table>
-		<button type='submit'>Enter</button>
+		<button type='submit' onclick='login()'></button>Enter</button>
 	</body>
 </html>
